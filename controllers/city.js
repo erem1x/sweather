@@ -15,6 +15,7 @@ router.get("/*", (req, res) => {
     var token=req.query.access_token
     var citta=req.path.split("/")[1]
     res.redirect(sw_url+citta+"&appid="+appid+"&mode=html")
+    res.sendFile(path.resolve(".")+/views/success.html")
     
     city.search(citta, (result, doc) =>{
 	
