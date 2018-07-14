@@ -1,0 +1,31 @@
+{
+  "name": "simpleweather",
+  "version": "1.0.0",
+  "description": "A simple weather web service",
+  "main": "app.js",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "child_process": "^1.0.2",
+    "dropbox": "^4.0.7",
+    "express": "^4.16.3",
+    "fb": "^2.0.0",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "request": "^2.87.0",
+    "ws": "^5.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erem1x/simpleweather.git"
+  },
+  "author": "Emilio Martino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erem1x/simpleweather/issues"
+  },
+  "homepage": "https://github.com/erem1x/simpleweather#readme"
+}
