@@ -17,7 +17,7 @@
 
 - **RabbitMQ e CouchDB devono essere in esecuzione** su _localhost_.
 
-- Deve esistere un database dal nome "simpleweather_db".
+- Deve esistere un database dal nome `simpleweather_db`.
 
 ## **Descrizione**
 - Il progetto è scritto interamente in javascript, tramite l'utilizzo della piattaforma `nodeJS`. In particolare, viene fatto largo uso del framework `Express`.
