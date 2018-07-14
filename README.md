@@ -8,3 +8,13 @@
 - [x] Si devono usare Websocket
 - [x] Il progetto deve essere su GITHUB
 - [x] Le API del servizio REST implementato devono essere documentate su GITHUB
+
+## **Avvio**
+
+- Installare le dipendenze eseguendo il comando "npm install"
+
+- Avviare il server eseguendo "node app"
+
+- **RabbitMQ e CouchDB devono essere in esecuzione** su _localhost_.
+
+- Deve esistere un database dal nome "simpleweather_db".
