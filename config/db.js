@@ -7,11 +7,6 @@ const helper = require("../helpers/helper")
 const db_name = 'simpleweather_db'
 const db_url = "http://localhost:5984/"+db_name
 
-//URL richiesta da CouchDB per eseguire la query
-//const view_url = db_url + "/_design/date/_view/getByDate"
-//const find_url = db_url + "/_find"
-
-
 //Metodo che attraverso POST http inserisce i documenti all'interno del database tramite CouchDB
 exports.save = function(doc, callback) {
     request.post({
