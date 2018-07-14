@@ -27,5 +27,14 @@ Viene poi salvato il risultato della ricerca su un file **Dropbox** (previo acce
 ## **Dettagli**
 - Il server viene attivato su http://localhost:3333 e messo in ascolto per eventuali richieste. 
 All'avvio di app.js, si viene reindirizzati, tramite index.js, su http://localhost:3333/auth, dove avviene il processo di autenticazione. Entra in gioco il controller **auth.js** che chiama `authenticate` del middleware **dropbox.js**. 
-Una volta arrivati all'url di autenticazione e accettati i permessi, viene richiesto il token a *Dropbox* tramite `oauth2callback.js`
+Una volta arrivati all'url di autenticazione e accettati i permessi, viene richiesto il token a *Dropbox* tramite `oauth2callback.js`. Dopo aver ottenuto il token si torna in `index.js` e viene caricata la pagina html per inserire la città. Dopo averla inserita, viene fornito il risultato via HTML ed eseguito un redirect su `success.html`. In quest'ultima pagina vengono loggati tramite websocket tutti i passaggi che esegue il server durante le operazioni di elaborazione dati. A questo punto il controller `city.js` prende il token e la città contenuti nell'URL e inserisce, tramite `db.js` il risultato in JSON nel database *CouchDB*, tramite **RabbitMQ**.
+A questo punto, il controller `city.js` richiama il middleware `dropbox.js` per scrivere in un file il risultato.
+
+## **API Utilizzate**
+
+* [Dropbox](http://dropbox.com)
+* [OpenWeatherMap](http://openweathermap.org)
+* [CouchDB](http://couchdb.apache.org)
+
+
 
